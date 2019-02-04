@@ -1234,8 +1234,7 @@
           }
         },
         "total": {
-          "format": "int32",
-          "type": "integer"
+          "type": "string"
         },
         "category": {
           "type": "string"
