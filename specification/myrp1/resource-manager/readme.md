@@ -1,14 +1,14 @@
-# Azure NetApp Files
+# Azure myrp1 Files
 
 > see https://aka.ms/autorest
 
-This is the AutoRest configuration file for Azure NetApp Files.
+This is the AutoRest configuration file for Azure myrp1 Files.
 
 
 
 ---
 ## Getting Started
-To build the SDK for Azure NetApp Files, simply [Install AutoRest](https://aka.ms/autorest/install) and in this folder, run:
+To build the SDK for Azure myrp1 Files, simply [Install AutoRest](https://aka.ms/autorest/install) and in this folder, run:
 
 > `autorest`
 
@@ -22,7 +22,7 @@ To see additional help and options, run:
 
 
 ### Basic Information
-These are the global settings for the Azure NetApp Files API.
+These are the global settings for the Azure myrp1 Files API.
 
 ``` yaml
 openapi-type: arm
@@ -36,7 +36,7 @@ These settings apply only when `--tag=package-2017-08-15` is specified on the co
 
 ``` yaml $(tag) == 'package-2017-08-15'
 input-file:
-- Microsoft.NetApp/preview/2017-08-15/netapp.json
+- Microsoft.myrp1/preview/2017-08-15/myrp1.json
 ```
 
 

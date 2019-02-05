@@ -1,11 +1,11 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Microsoft NetApp",
-    "description": "Microsoft NetApp Azure Resource Provider specification",
+    "title": "Microsoft myrp1",
+    "description": "Microsoft myrp1 Azure Resource Provider specification",
     "version": "2017-08-15",
     "x-ms-code-generation-settings": {
-      "name": "AzureNetAppFilesManagementClient"
+      "name": "Azuremyrp1FilesManagementClient"
     }
   },
   "consumes": [
@@ -37,12 +37,12 @@
     }
   },
   "paths": {
-    "/providers/Microsoft.NetApp/operations": {
+    "/providers/Microsoft.myrp1/operations": {
       "get": {
         "tags": [
           "Operations"
         ],
-        "description": "Lists all of the available Microsoft.NetApp Rest API operations",
+        "description": "Lists all of the available Microsoft.myrp1 Rest API operations",
         "operationId": "Operations_List",
         "parameters": [
           {
@@ -68,7 +68,7 @@
         }
       }
     },
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.NetApp/netAppAccounts": {
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.myrp1/myrp1Accounts": {
       "parameters": [
         {
           "$ref": "#/parameters/SubscriptionId"
@@ -81,9 +81,9 @@
         }
       ],
       "get": {
-        "description": "Lists all NetApp accounts in the resource group",
+        "description": "Lists all myrp1 accounts in the resource group",
         "tags": [
-          "NetApp Accounts"
+          "myrp1 Accounts"
         ],
         "operationId": "Accounts_List",
         "x-ms-pageable": {
@@ -93,7 +93,7 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/netAppAccountList"
+              "$ref": "#/definitions/myrp1AccountList"
             }
           },
           "default": {
@@ -110,7 +110,7 @@
         }
       }
     },
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.NetApp/netAppAccounts/{accountName}": {
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.myrp1/myrp1Accounts/{accountName}": {
       "parameters": [
         {
           "$ref": "#/parameters/SubscriptionId"
@@ -126,16 +126,16 @@
         }
       ],
       "get": {
-        "description": "Get the NetApp account",
+        "description": "Get the myrp1 account",
         "tags": [
-          "NetApp Accounts"
+          "myrp1 Accounts"
         ],
         "operationId": "Accounts_Get",
         "responses": {
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/netAppAccount"
+              "$ref": "#/definitions/myrp1Account"
             }
           },
           "default": {
@@ -153,18 +153,18 @@
       },
       "put": {
         "tags": [
-          "NetApp Accounts"
+          "myrp1 Accounts"
         ],
         "operationId": "Accounts_CreateOrUpdate",
-        "description": "Create or update a NetApp account",
+        "description": "Create or update a myrp1 account",
         "parameters": [
           {
             "name": "body",
-            "description": "NetApp Account object supplied in the body of the operation.",
+            "description": "myrp1 Account object supplied in the body of the operation.",
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/netAppAccount"
+              "$ref": "#/definitions/myrp1Account"
             }
           }
         ],
@@ -172,7 +172,7 @@
           "201": {
             "description": "Account created",
             "schema": {
-              "$ref": "#/definitions/netAppAccount"
+              "$ref": "#/definitions/myrp1Account"
             }
           },
           "202": {
@@ -194,10 +194,10 @@
       },
       "delete": {
         "tags": [
-          "NetApp Accounts"
+          "myrp1 Accounts"
         ],
         "operationId": "Accounts_Delete",
-        "description": "Delete a NetApp account",
+        "description": "Delete a myrp1 account",
         "responses": {
           "202": {
             "description": "Accepted -- Create or update request accepted; operation will complete asynchronously"
@@ -221,18 +221,18 @@
       },
       "patch": {
         "tags": [
-          "NetApp Accounts"
+          "myrp1 Accounts"
         ],
         "operationId": "Accounts_Update",
-        "description": "Patch a NetApp account",
+        "description": "Patch a myrp1 account",
         "parameters": [
           {
             "name": "body",
-            "description": "NetApp Account object supplied in the body of the operation.",
+            "description": "myrp1 Account object supplied in the body of the operation.",
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/netAppAccountPatch"
+              "$ref": "#/definitions/myrp1AccountPatch"
             }
           }
         ],
@@ -240,7 +240,7 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/netAppAccount"
+              "$ref": "#/definitions/myrp1Account"
             }
           },
           "default": {
@@ -257,7 +257,7 @@
         }
       }
     },
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.NetApp/netAppAccounts/{accountName}/capacityPools": {
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.myrp1/myrp1Accounts/{accountName}/capacityPools": {
       "parameters": [
         {
           "$ref": "#/parameters/SubscriptionId"
@@ -273,7 +273,7 @@
         }
       ],
       "get": {
-        "description": "Lists all capacity pools in the NetApp Account",
+        "description": "Lists all capacity pools in the myrp1 Account",
         "tags": [
           "Capacity Pools"
         ],
@@ -302,7 +302,7 @@
         }
       }
     },
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.NetApp/netAppAccounts/{accountName}/capacityPools/{poolName}": {
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.myrp1/myrp1Accounts/{accountName}/capacityPools/{poolName}": {
       "parameters": [
         {
           "$ref": "#/parameters/SubscriptionId"
@@ -458,7 +458,7 @@
         }
       }
     },
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.NetApp/netAppAccounts/{accountName}/capacityPools/{poolName}/volumes": {
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.myrp1/myrp1Accounts/{accountName}/capacityPools/{poolName}/volumes": {
       "parameters": [
         {
           "$ref": "#/parameters/SubscriptionId"
@@ -506,7 +506,7 @@
         }
       }
     },
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.NetApp/netAppAccounts/{accountName}/capacityPools/{poolName}/volumes/{volumeName}": {
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.myrp1/myrp1Accounts/{accountName}/capacityPools/{poolName}/volumes/{volumeName}": {
       "parameters": [
         {
           "$ref": "#/parameters/SubscriptionId"
@@ -665,7 +665,7 @@
         }
       }
     },
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.NetApp/netAppAccounts/{accountName}/capacityPools/{poolName}/volumes/{volumeName}/mountTargets": {
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.myrp1/myrp1Accounts/{accountName}/capacityPools/{poolName}/volumes/{volumeName}/mountTargets": {
       "parameters": [
         {
           "$ref": "#/parameters/SubscriptionId"
@@ -716,7 +716,7 @@
         }
       }
     },
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.NetApp/netAppAccounts/{accountName}/capacityPools/{poolName}/volumes/{volumeName}/snapshots": {
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.myrp1/myrp1Accounts/{accountName}/capacityPools/{poolName}/volumes/{volumeName}/snapshots": {
       "parameters": [
         {
           "$ref": "#/parameters/SubscriptionId"
@@ -767,7 +767,7 @@
         }
       }
     },
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.NetApp/netAppAccounts/{accountName}/capacityPools/{poolName}/volumes/{volumeName}/snapshots/{snapshotName}": {
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.myrp1/myrp1Accounts/{accountName}/capacityPools/{poolName}/volumes/{volumeName}/snapshots/{snapshotName}": {
       "parameters": [
         {
           "$ref": "#/parameters/SubscriptionId"
@@ -938,7 +938,7 @@
       }
     },
     "Operation": {
-      "description": "Microsoft.NetApp REST API operation definition.",
+      "description": "Microsoft.myrp1 REST API operation definition.",
       "type": "object",
       "properties": {
         "name": {
@@ -949,7 +949,7 @@
           "description": "Display metadata associated with the operation.",
           "properties": {
             "provider": {
-              "description": "Service provider: Microsoft NetApp.",
+              "description": "Service provider: Microsoft myrp1.",
               "type": "string"
             },
             "resource": {
@@ -1055,21 +1055,21 @@
         }
       }
     },
-    "netAppAccountList": {
-      "description": "List of NetApp account resources",
+    "myrp1AccountList": {
+      "description": "List of myrp1 account resources",
       "type": "object",
       "properties": {
         "value": {
           "type": "array",
-          "description": "Multiple NetApp accounts",
+          "description": "Multiple myrp1 accounts",
           "items": {
-            "$ref": "#/definitions/netAppAccount"
+            "$ref": "#/definitions/myrp1Account"
           }
         }
       }
     },
-    "netAppAccount": {
-      "description": "NetApp account resource",
+    "myrp1Account": {
+      "description": "myrp1 account resource",
       "type": "object",
       "x-ms-azure-resource": true,
       "required": [
@@ -1105,14 +1105,14 @@
           "$ref": "#/definitions/resourceTags"
         },
         "properties": {
-          "description": "NetApp Account properties",
+          "description": "myrp1 Account properties",
           "$ref": "#/definitions/accountProperties",
           "x-ms-client-flatten": true
         }
       }
     },
-    "netAppAccountPatch": {
-      "description": "NetApp account patch resource",
+    "myrp1AccountPatch": {
+      "description": "myrp1 account patch resource",
       "type": "object",
       "x-ms-azure-resource": true,
       "properties": {
@@ -1123,7 +1123,7 @@
       }
     },
     "accountProperties": {
-      "description": "NetApp account properties",
+      "description": "myrp1 account properties",
       "type": "object",
       "properties": {
         "provisioningState": {
@@ -1393,7 +1393,7 @@
         },
         "subnetId": {
           "type": "string",
-          "description": "The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes"
+          "description": "The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.myrp1/volumes"
         }
       }
     },
@@ -1747,7 +1747,7 @@
       "type": "string",
       "in": "path",
       "required": true,
-      "description": "The name of the NetApp account",
+      "description": "The name of the myrp1 account",
       "x-ms-parameter-location": "method"
     },
     "PoolName": {

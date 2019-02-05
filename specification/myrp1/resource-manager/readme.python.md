@@ -10,8 +10,8 @@ python:
   azure-arm: true
   license-header: MICROSOFT_MIT_NO_VERSION
   payload-flattening-threshold: 2
-  namespace: azure.mgmt.netapp
-  package-name: azure-mgmt-netapp
+  namespace: azure.mgmt.myrp1
+  package-name: azure-mgmt-myrp1
   package-version: 1.0.0
   clear-output-folder: true
 ```
@@ -19,11 +19,11 @@ python:
 ``` yaml $(python) && $(python-mode) == 'update'
 python:
   no-namespace-folders: true
-  output-folder: $(python-sdks-folder)/azure-mgmt-netapp/azure/mgmt/netapp
+  output-folder: $(python-sdks-folder)/azure-mgmt-myrp1/azure/mgmt/myrp1
 ```
 
 ``` yaml $(python) && $(python-mode) == 'create'
 python:
   basic-setup-py: true
-  output-folder: $(python-sdks-folder)/azure-mgmt-netapp
+  output-folder: $(python-sdks-folder)/azure-mgmt-myrp1
 ```
